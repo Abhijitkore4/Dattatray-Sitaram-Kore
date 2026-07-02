@@ -1,0 +1,426 @@
+/*====================================================
+                LARGE LAPTOPS
+=====================================================*/
+
+@media (max-width:1200px){
+
+    .container{
+        width:94%;
+    }
+
+    .hero h1{
+        font-size:54px;
+    }
+
+    .section-header h2{
+        font-size:38px;
+    }
+
+}
+
+/*====================================================
+                    TABLETS
+=====================================================*/
+
+@media (max-width:992px){
+
+    .section{
+        padding:80px 0;
+    }
+
+    .hero-container,
+    .about-wrapper,
+    .contact-wrapper{
+
+        grid-template-columns:1fr;
+        gap:60px;
+
+    }
+
+    .hero-left{
+
+        order:2;
+        text-align:center;
+
+    }
+
+    .hero-right{
+
+        order:1;
+
+    }
+
+    .hero-buttons,
+    .hero-features{
+
+        justify-content:center;
+
+    }
+
+    .hero h1{
+
+        font-size:48px;
+
+    }
+
+    .hero p{
+
+        max-width:700px;
+        margin-left:auto;
+        margin-right:auto;
+
+    }
+
+    .services-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .trust-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .mission-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .process-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .process-grid .process-card::after{
+
+        display:none;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .testimonial-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .experience-card{
+
+        right:20px;
+
+    }
+
+    .nav-links{
+
+        position:fixed;
+
+        top:85px;
+        left:-100%;
+
+        width:100%;
+        height:calc(100vh - 85px);
+
+        background:#fff;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        align-items:center;
+
+        padding-top:60px;
+
+        gap:35px;
+
+        transition:.35s;
+
+        box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    }
+
+    .nav-links.active{
+
+        left:0;
+
+    }
+
+    .menu-btn{
+
+        display:block;
+
+    }
+
+    .nav-buttons .btn{
+
+        display:none;
+
+    }
+
+}
+
+/*====================================================
+                MOBILE DEVICES
+=====================================================*/
+
+@media (max-width:768px){
+
+    .section{
+
+        padding:70px 0;
+
+    }
+
+    .top-bar{
+
+        display:none;
+
+    }
+
+    header{
+
+        top:0;
+
+    }
+
+    nav{
+
+        height:75px;
+
+    }
+
+    .hero{
+
+        min-height:auto;
+        padding:60px 0 100px;
+
+    }
+
+    .hero h1{
+
+        font-size:38px;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .hero-buttons .btn{
+
+        width:100%;
+
+    }
+
+    .hero-card{
+
+        padding:25px;
+
+    }
+
+    .card-top{
+
+        flex-direction:column;
+        text-align:center;
+
+    }
+
+    .section-header{
+
+        margin-bottom:50px;
+
+    }
+
+    .section-header h2{
+
+        font-size:32px;
+
+    }
+
+    .about-content h3{
+
+        font-size:32px;
+
+    }
+
+    .services-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .trust-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .process-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .cta-content h2{
+
+        font-size:34px;
+
+    }
+
+    .cta-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .cta-buttons .btn{
+
+        width:100%;
+
+    }
+
+    .contact-info,
+    .contact-form{
+
+        padding:30px;
+
+    }
+
+    .image-box img{
+
+        height:450px;
+
+    }
+
+    .experience-card{
+
+        position:relative;
+        right:auto;
+        bottom:auto;
+        margin-top:20px;
+        width:100%;
+
+    }
+
+}
+
+/*====================================================
+                SMALL PHONES
+=====================================================*/
+
+@media (max-width:576px){
+
+    .hero h1{
+
+        font-size:32px;
+
+    }
+
+    .logo h2{
+
+        font-size:20px;
+
+    }
+
+    .logo span{
+
+        font-size:12px;
+
+    }
+
+    .logo-circle{
+
+        width:48px;
+        height:48px;
+
+        font-size:20px;
+
+    }
+
+    .section-header h2{
+
+        font-size:28px;
+
+    }
+
+    .about-content h3{
+
+        font-size:28px;
+
+    }
+
+    .stat-box h2{
+
+        font-size:34px;
+
+    }
+
+    .mission-card,
+    .service-card,
+    .testimonial-card{
+
+        padding:28px;
+
+    }
+
+    .floating-btn{
+
+        width:52px;
+        height:52px;
+        font-size:18px;
+
+    }
+
+    .call{
+
+        bottom:150px;
+
+    }
+
+    .whatsapp{
+
+        bottom:85px;
+
+    }
+
+    .scroll-top{
+
+        width:50px;
+        height:50px;
+
+    }
+
+}
