@@ -67,8 +67,6 @@ body{
 
     background:#fff;
 
-    overflow-x:hidden;
-
     line-height:1.7;
 
 }
@@ -2129,14 +2127,14 @@ footer{
 
 
 /*====================================================
-            FLOATING BUTTONS
+            FLOATING ACTION BUTTONS
 =====================================================*/
 
 .floating-btn{
 
     position:fixed;
 
-    right:25px;
+    right:20px;
 
     width:58px;
     height:58px;
@@ -2144,41 +2142,71 @@ footer{
     border-radius:50%;
 
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
 
     color:#fff;
 
-    font-size:22px;
-
-    box-shadow:0 15px 30px rgba(0,0,0,.18);
+    text-decoration:none;
 
     z-index:999;
 
-    transition:.35s;
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+
+    transition:.3s ease;
 
 }
 
 .floating-btn:hover{
 
-    transform:scale(1.1);
-
-}
-
-.whatsapp{
-
-    bottom:100px;
-    background:#25D366;
+    transform:translateY(-4px);
 
 }
 
 .call{
 
-    bottom:170px;
-    background:var(--primary);
+    background:#0F4C81;
+
+    bottom:95px;
 
 }
 
+.whatsapp{
+
+    background:#25D366;
+
+    bottom:25px;
+
+}
+
+.scroll-top{
+
+    position:fixed;
+
+    left:20px;
+
+    bottom:25px;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#F4B400;
+
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    z-index:999;
+
+}
 
 /*====================================================
                 SCROLL TOP
@@ -2188,7 +2216,7 @@ footer{
 
     position:fixed;
 
-    left:25px;
+    left:12px;
     bottom:25px;
 
     width:56px;
@@ -2206,7 +2234,7 @@ footer{
 
     cursor:pointer;
 
-    box-shadow:0 15px 30px rgba(0,0,0,.18);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 
     transition:.35s;
 
@@ -2214,6 +2242,8 @@ footer{
     visibility:hidden;
 
     z-index:999;
+
+    overflow:hidden;
 
 }
 
