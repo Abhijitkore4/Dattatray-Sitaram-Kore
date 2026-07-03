@@ -1,336 +1,365 @@
+/*====================================================
+                RESPONSIVE
+=====================================================*/
 
-/* =====================================================
-   RESPONSIVE.CSS
-   Mobile & Tablet Responsive Styles
-===================================================== */
+/* ---------- Large tablets / small laptops ---------- */
+@media (max-width: 1200px) {
+
+    .container {
+        max-width: 100%;
+    }
+
+    .hero-container {
+        gap: 34px;
+    }
+
+    .stats-grid,
+    .trust-grid,
+    .process-grid {
+        gap: 20px;
+    }
+
+}
+
+/* ---------- Tablets ---------- */
+@media (max-width: 992px) {
+
+    .section {
+        padding: 76px 0;
+    }
+
+    .top-bar .top-right {
+        display: none;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        padding-bottom: 70px;
+        text-align: center;
+    }
+
+    .hero-left > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons,
+    .hero-features {
+        justify-content: center;
+    }
+
+    .hero-right {
+        margin-top: 20px;
+    }
+
+    .hero-card {
+        max-width: 460px;
+    }
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+
+    .about-image {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .mission-grid,
+    .services-grid,
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trust-grid,
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 36px;
+    }
+
+    .stat-box:nth-child(2) {
+        border-right: none;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 40px;
+    }
+
+}
+
+/* ---------- Mobile nav takeover ---------- */
+@media (max-width: 860px) {
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        background: var(--paper);
+        border-top: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        padding: 10px 24px 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .35s ease, padding .35s ease;
+    }
+
+    .nav-links.active {
+        max-height: 420px;
+        padding: 16px 24px 24px;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px dashed var(--line);
+    }
+
+    .nav-links li:last-child a {
+        border-bottom: none;
+    }
+
+    .nav-buttons .btn-primary {
+        display: none;
+    }
+
+}
+
+/* ---------- Small tablets / large phones ---------- */
+@media (max-width: 768px) {
+
+    :root {
+        --header-h: 74px;
+    }
+
+    .section {
+        padding: 64px 0;
+    }
+
+    .section-header {
+        margin-bottom: 44px;
+    }
+
+    .logo h2 {
+        font-size: 1rem;
+    }
+
+    .logo-circle {
+        width: 42px;
+        height: 42px;
+        font-size: 1.05rem;
+    }
+
+    .hero {
+        padding-top: 30px;
+    }
+
+    .hero-card {
+        transform: none;
+    }
+
+    .card-top {
+        padding: 24px 22px;
+    }
+
+    .experience-card {
+        right: 12px;
+        bottom: -20px;
+        padding: 18px 20px;
+    }
+
+    .mission-grid,
+    .services-grid,
+    .testimonial-grid,
+    .trust-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-box {
+        border-right: none;
+        border-bottom: 1px solid rgba(250, 246, 236, 0.12);
+        padding-bottom: 24px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+        padding: 28px 24px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        text-align: left;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .floating-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        right: 18px;
+    }
+
+    .floating-btn.whatsapp {
+        bottom: 84px;
+    }
+
+    .floating-btn.call {
+        bottom: 20px;
+    }
+
+    .scroll-top {
+        right: 18px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .scroll-top.show {
+        bottom: 144px;
+    }
+
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 560px) {
+
+    .container {
+        padding: 0 18px;
+    }
+
+    .top-bar {
+        font-size: 0.72rem;
+    }
+
+    .top-left {
+        gap: 6px;
+    }
+
+    .hero-tag {
+        font-size: 0.7rem;
+        padding: 6px 14px;
+    }
+
+    .hero-left h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .hero-card {
+        max-width: 100%;
+    }
+
+    .experience-card {
+        position: static;
+        margin-top: -14px;
+        display: inline-block;
+    }
+
+    .about-image {
+        max-width: 100%;
+    }
+
+    .section-tag {
+        font-size: 0.7rem;
+        padding: 5px 14px;
+    }
+
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .service-card,
+    .mission-card,
+    .process-card,
+    .testimonial-card {
+        padding: 28px 22px;
+    }
+
+    .faq-question {
+        padding: 16px 18px;
+        font-size: 0.92rem;
+        gap: 12px;
+    }
+
+    .faq-answer p {
+        padding: 0 18px 18px;
+    }
+
+    .faq-cta {
+        padding: 30px 22px;
+    }
+
+    .consultation-box {
+        padding: 32px 22px 26px;
+    }
+
+    .map-section iframe {
+        height: 280px;
+    }
+
+    .footer-col h3 {
+        font-size: 1.05rem;
+    }
+
+}
+
+/* ---------- Very small phones ---------- */
+@media (max-width: 380px) {
+
+    .hero-left h1 {
+        font-size: 1.65rem;
+    }
+
+    .btn {
+        padding: 13px 24px;
+        font-size: 0.9rem;
+    }
+
+    .logo span {
+        display: none;
+    }
 
-/* Large Laptop */
-@media (max-width:1200px){
-
-.container{
-    width:min(95%,1100px);
-}
-
-.hero-left h1{
-    font-size:clamp(2.8rem,5vw,3.4rem);
-}
-
-.section-header h2{
-    font-size:2.2rem;
-}
-
-.footer-grid{
-    grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-/* Laptop / Tablet */
-
-@media (max-width:992px){
-
-.section{
-    padding:80px 0;
-}
-
-.top-bar .container{
-    flex-direction:column;
-    gap:10px;
-    text-align:center;
-}
-
-.top-left,
-.top-right{
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-nav{
-    min-height:80px;
-}
-
-.hero{
-    padding:90px 0 130px;
-}
-
-.hero-container,
-.about-wrapper{
-    grid-template-columns:1fr;
-    gap:50px;
-}
-
-.hero-left,
-.about-content{
-    text-align:center;
-}
-
-.hero-buttons,
-.hero-features{
-    justify-content:center;
-}
-
-.hero-right{
-    order:2;
-}
-
-.services-grid{
-    grid-template-columns:repeat(2,1fr);
-}
-
-.stats-grid,
-.mission-grid,
-.trust-grid,
-.process-grid,
-.testimonial-grid{
-    grid-template-columns:repeat(2,1fr);
-}
-
-.footer-grid{
-    grid-template-columns:repeat(2,1fr);
-}
-
-.contact-item{
-    align-items:flex-start;
-}
-
-}
-
-/* Tablet */
-
-@media (max-width:768px){
-
-.section{
-    padding:70px 0;
-}
-
-.section-header{
-    margin-bottom:45px;
-}
-
-.section-header h2{
-    font-size:2rem;
-}
-
-.hero-left h1{
-    font-size:2.4rem;
-}
-
-.hero-left p{
-    font-size:1rem;
-}
-
-.hero-buttons{
-    flex-direction:column;
-}
-
-.hero-buttons .btn,
-.cta-buttons .btn{
-    width:100%;
-}
-
-.hero-features{
-    flex-direction:column;
-}
-
-.feature{
-    justify-content:center;
-}
-
-.hero-card{
-    padding:24px;
-}
-
-.services-grid,
-.stats-grid,
-.mission-grid,
-.trust-grid,
-.process-grid,
-.testimonial-grid,
-.footer-grid{
-    grid-template-columns:1fr;
-}
-
-.contact-info{
-    padding:30px;
-}
-
-.contact-item{
-    gap:15px;
-}
-
-.contact-item i{
-    width:52px;
-    height:52px;
-    font-size:1.2rem;
-}
-
-.faq-question{
-    padding:20px;
-    font-size:1rem;
-}
-
-.faq-answer p{
-    padding:0 20px 20px;
-}
-
-.footer{
-    text-align:center;
-}
-
-.social-links{
-    justify-content:center;
-}
-
-.experience-card{
-    position:relative;
-    right:auto;
-    bottom:auto;
-    margin:20px auto 0;
-}
-
-}
-
-/* Mobile */
-
-@media (max-width:576px){
-
-.container{
-    width:92%;
-}
-
-.hero{
-    padding:70px 0 110px;
-}
-
-.hero-left h1{
-    font-size:2rem;
-}
-
-.section-header h2{
-    font-size:1.75rem;
-}
-
-.section-tag{
-    font-size:.8rem;
-}
-
-.about-content h3,
-.contact-info h3,
-.cta-content h2{
-    font-size:1.6rem;
-}
-
-.service-card,
-.process-card,
-.mission-card,
-.trust-item,
-.testimonial-card,
-.contact-info,
-.hero-card,
-.faq-cta{
-    padding:24px;
-}
-
-.logo h2{
-    font-size:1rem;
-}
-
-.logo span{
-    font-size:.8rem;
-}
-
-.logo-circle{
-    width:52px;
-    height:52px;
-}
-
-.floating-btn{
-    width:52px;
-    height:52px;
-    right:15px;
-}
-
-.floating-btn.call{
-    bottom:145px;
-}
-
-.floating-btn.whatsapp{
-    bottom:80px;
-}
-
-.scroll-top{
-    left:15px;
-    width:50px;
-    height:50px;
 }
-
-.consultation-box{
-    padding:25px;
-}
-
-.map-section iframe{
-    height:300px;
-}
-
-}
-
-/* Small Mobile */
-
-@media (max-width:400px){
-
-.hero-left h1{
-    font-size:1.75rem;
-}
-
-.hero-tag{
-    font-size:.75rem;
-    padding:10px 16px;
-}
-
-.btn{
-    padding:13px 22px;
-    font-size:.9rem;
-}
-
-.top-left,
-.top-right{
-    font-size:.8rem;
-}
-
-.contact-item{
-    flex-direction:column;
-}
-
-.contact-item i{
-    margin-bottom:5px;
-}
-
-.faq-question{
-    font-size:.95rem;
-}
-
-.footer-bottom p{
-    font-size:.85rem;
-}
-
-}
-
-/* Landscape phones */
-
-@media (max-height:500px) and (orientation:landscape){
-
-.hero{
-    padding:60px 0 90px;
-}
-
-.consultation-modal{
-    align-items:flex-start;
-    overflow:auto;
-}
-
-.consultation-box{
-    margin:20px auto;
-}
-
-}
-
