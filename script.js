@@ -301,57 +301,6 @@ counters.forEach(counter => {
 
 
 /*====================================================
-            CONTACT FORM
-=====================================================*/
-
-const form = document.querySelector(".contact-form");
-
-if (form) {
-
-    form.addEventListener("submit", function (e) {
-
-        e.preventDefault();
-
-        const name = form.querySelector('input[type="text"]');
-        const email = form.querySelector('input[type="email"]');
-        const phone = form.querySelector('input[type="tel"]');
-        const message = form.querySelector("textarea");
-
-        if (
-
-            !name.value.trim() ||
-            !email.value.trim() ||
-            !phone.value.trim() ||
-            !message.value.trim()
-
-        ) {
-
-            alert("Please fill in all required fields.");
-
-            return;
-
-        }
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (!emailRegex.test(email.value)) {
-
-            alert("Please enter a valid email address.");
-
-            return;
-
-        }
-
-        alert("Thank you! Your message has been received.");
-
-        form.reset();
-
-    });
-
-}
-
-
-/*====================================================
                 CURRENT YEAR
 =====================================================*/
 
@@ -380,7 +329,7 @@ window.addEventListener("load", () => {
 =====================================================*/
 
 console.log("%cWebsite Developed Successfully",
-"color:#0F4C81;font-size:18px;font-weight:bold;");
+    "color:#0F4C81;font-size:18px;font-weight:bold;");
 
 /*==================================
     OPEN CONSULTATION POPUP
@@ -394,11 +343,15 @@ const closeBtn = document.querySelector(".close-modal");
 
 consultationButtons.forEach(button => {
 
-    button.addEventListener("click", function(e){
+    button.addEventListener("click", function (e) {
 
         e.preventDefault();
 
-        modal.style.display = "flex";
+        if (modal) {
+
+            modal.style.display = "flex";
+
+        }
 
         document.body.style.overflow = "hidden";
 
@@ -406,11 +359,16 @@ consultationButtons.forEach(button => {
 
 });
 
-closeBtn.addEventListener("click", closeModal);
+if (closeBtn) {
 
-window.addEventListener("click", function(e){
+    closeBtn.addEventListener("click", closeModal);
 
-    if(e.target === modal){
+}
+
+
+window.addEventListener("click", function (e) {
+
+    if (e.target === modal) {
 
         closeModal();
 
@@ -418,10 +376,65 @@ window.addEventListener("click", function(e){
 
 });
 
-function closeModal(){
+function closeModal() {
 
     modal.style.display = "none";
 
     document.body.style.overflow = "auto";
 
+}
+
+/*==================================
+    CONSULTATION FORM
+==================================*/
+
+const consultationForm = document.getElementById("consultationForm");
+
+if (consultationForm) {
+
+    consultationForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        e.preventDefault();
+
+        const name = document.getElementById("consultName").value.trim();
+
+        const phone = document.getElementById("consultPhone").value.trim();
+
+        const service = document.getElementById("consultService").value;
+
+        const message = document.getElementById("consultMessage").value.trim();
+
+        const whatsappMessage =
+            `Hello,
+
+I visited your website and would like to book a consultation.
+
+------------------------------------
+
+Name: ${name}   
+
+Mobile: ${phone}
+
+Service: ${service}
+
+Requirement: ${message}
+
+------------------------------------
+
+Please contact me at your earliest convenience.
+
+Thank you.`;
+
+        const whatsappURL =
+            `https://wa.me/919860175670?text=${encodeURIComponent(whatsappMessage)}`;
+
+        window.open(whatsappURL, "_blank");
+
+        consultationForm.reset();
+
+        closeModal();
+
+    });
 }
